@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <style>
+        body{
+            background: #E9E9E9;
+            font-family: 微软雅黑;
+        }
+        table{
+
+            width:380px;
+            height:320px;
+            border: solid 0 red;
+            margin: 50px auto;
+            border-collapse: collapse;
+
+        }
+
+        td{
+            padding:5px;
+        }
+
+        .icon_div{
+
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            background: #ffffff;
+            margin: 10px auto;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+
+        }
+
+        .btn{
+            cursor: pointer;
+            background: #ffffff;
+        }
+        .btn:hover{
+            background: #D8D8D8;
+        }
+
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td colspan="2" style="height:240px;background: #F05A5D;text-align: center;color: #ffffff;">
+            <span style="font-size: 100px;font-family: 'Agency FB'">404</span>
+            <br>
+            糟糕，页面不存在
+        </td>
+    </tr>
+    <tr>
+        <td class="btn" style="text-align: center;" onclick="window.location='<?php echo _ROOT_; ?>'">
+            去首页
+        </td>
+        <td class="btn" style="text-align: center;border-left: solid 1px #CBCBCB;" ONCLICK="javascript:history.go(-1)">
+            返　回
+        </td>
+    </tr>
+</table>
+</body>
+</html>

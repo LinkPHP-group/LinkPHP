@@ -1,0 +1,23 @@
+{
+    "name": "LinkPHP",
+    "description": "PHP Framework for LinkPHP",
+    "type": "Framework",
+    "keywords": ["Framework","LinkPHP","ORM","php"],
+    "authors": [
+        {
+            "name": "Link",
+            "email": "767102998@qq.com"
+        }
+    ],
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "filp/whoops":"*"
+    },
+    "minimum-stability": "dev"
+}

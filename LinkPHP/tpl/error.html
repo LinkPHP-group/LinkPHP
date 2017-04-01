@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作失败</title>
+    <style>
+        body{
+            background: #E9E9E9;
+            font-family: 微软雅黑;
+        }
+        table{
+
+            width:380px;
+            height:320px;
+            border: solid 0 red;
+            margin: 50px auto;
+            border-collapse: collapse;
+
+        }
+
+        td{
+            padding:5px;
+        }
+
+        .icon_div{
+
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            background: #ffffff;
+            margin: 10px auto;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="1" style="background: #F05A5D;height:240px;text-align: center;color: #ffffff;">
+            <div class="icon_div" style="color:  #F05A5D;">
+                ✕
+            </div>
+            <br>
+            <?php echo $msg; ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="background: #ffffff;text-align: center">
+            <span class="second" style="color: #F05A5D;margin-right: 5px;font-weight: bold;"><?php echo $s; ?></span>秒后自动跳转
+        </td>
+    </tr>
+</table>
+<script>
+
+    var second="<?php echo $s;?>";
+    var s=second;
+    var s_span=document.getElementsByClassName('second');
+    setInterval(function(){
+
+        s-=1;
+        s_span[0].innerHTML=s;
+        console.log(s);
+        if(s<=0){
+            history.go(-1);
+        }
+
+    },1000);
+
+</script>
+</body>
+</html>
