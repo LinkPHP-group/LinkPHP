@@ -268,6 +268,7 @@ function lp_success($target_url,$msg="操作成功",$s=3){
 
 //404提示页面
 function lp_404(){
+    http_response_code(404);
     if(lp_c('tpl_def_status')){
         $def=lp_c('tpl_def');
         include $def['404'];
@@ -294,6 +295,7 @@ function lp_return_notice($code='-1',$msg="",$is_404=0){
             }
         }else{
             if(lp_is_ajax() || APP_TYPE=='api'){
+                http_response_code(404);
                 lp_send(lp_ret('404', 'system error!'));
             }else{
                 lp_404();

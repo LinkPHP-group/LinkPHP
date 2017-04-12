@@ -43,7 +43,7 @@ if(!IS_CLI) {
     }
 }
 
-const LP_VERSION="V1.0.3";
+const LP_VERSION="V1.0.4";
 
 if(DEBUG==true){
     error_reporting(E_ALL);

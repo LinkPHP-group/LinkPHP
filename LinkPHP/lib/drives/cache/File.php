@@ -37,7 +37,7 @@ class File
     function setData($key, $cache_data, $cache_fix, $time_out)
     {
         $dir_path = self::$cache_path . '/';
-        echo $file_path = $dir_path . $cache_fix . $key . '.php';
+        $file_path = $dir_path . $cache_fix . $key . '.php';
         if (!is_dir($dir_path)) {
             mkdir($dir_path, '0755', true);
         }
