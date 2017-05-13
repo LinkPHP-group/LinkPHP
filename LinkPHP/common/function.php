@@ -371,6 +371,69 @@ function lp_substr_cn($need_str,$start,$end){
     return mb_substr($need_str,$start,$end,'utf-8');
 }
 
+//二维数组指定字段排序
+/**
+ * @param $list,需排序的目标数组
+ * @param $field,指定排序字段
+ * @param string $sortby，排序方式：asc,desc
+ * @return array|bool
+ */
+function lp_arr_sort($list, $field, $sortby = 'asc'){
+    if (is_array($list))
+    {
+        $refer = $resultSet = array();
+        foreach ($list as $i => $data)
+        {
+            $refer[$i] = &$data[$field];
+        }
+        switch ($sortby)
+        {
+            case 'asc': // 正向排序
+                asort($refer);
+                break;
+            case 'desc': // 逆向排序
+                arsort($refer);
+                break;
+            case 'nat': // 自然排序
+                natcasesort($refer);
+                break;
+        }
+        foreach ($refer as $key => $val)
+        {
+            $resultSet[] = &$list[$key];
+        }
+        return $resultSet;
+    }
+    return false;
+
+}
+
+//二维数组排序
+/**
+ * @param $need_arr,需排序的数组
+ * @param $arr，参考顺序数组
+ * @param string $f，指定排序数组字段
+ * @return array
+ */
+function lp_arr2_Sort($need_arr,$arr,$f='' ) {
+    if(empty($f)){
+        return array();
+    }
+    $res_arr=array();
+    $arr_flag=array();
+    foreach($arr as $v){
+        $arr_flag[$v]="";
+    }
+
+    foreach($need_arr as $v){
+        $arr_flag[$v[$f]]=$v;
+    }
+
+    $res_arr=array_values($arr_flag);
+    return $res_arr;
+
+}
+
 
 
 
