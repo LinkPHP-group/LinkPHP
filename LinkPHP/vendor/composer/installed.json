@@ -1,21 +1,71 @@
 [
     {
+        "name": "psr/log",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/php-fig/log/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d.zip",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-10-10T12:19:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
         "name": "filp/whoops",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/filp/whoops.git",
-            "reference": "92bdc6800ac6e233c9e161a1768e082389a73530"
+            "reference": "c871522057a16d2040bf97ba7be77a15ffa2e5e1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/filp/whoops/92bdc6800ac6e233c9e161a1768e082389a73530.zip",
-            "reference": "92bdc6800ac6e233c9e161a1768e082389a73530",
+            "url": "https://files.phpcomposer.com/files/filp/whoops/c871522057a16d2040bf97ba7be77a15ffa2e5e1.zip",
+            "reference": "c871522057a16d2040bf97ba7be77a15ffa2e5e1",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9 || ^7.0"
+            "php": "^5.5.9 || ^7.0",
+            "psr/log": "^1.0.1"
         },
         "require-dev": {
             "mockery/mockery": "0.9.*",
@@ -26,7 +76,7 @@
             "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
             "whoops/soap": "Formats errors as SOAP responses"
         },
-        "time": "2017-02-18T14:22:27+00:00",
+        "time": "2017-04-21T06:10:59+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
